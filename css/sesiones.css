@@ -1,7 +1,3 @@
-/* =========================================
-   ESTILOS ESPECÍFICOS: SESIONES (PAGE 3)
-   ========================================= */
-
 .contenidoSesiones {
     background-color: #030303; 
     min-height: 100vh;
@@ -11,10 +7,9 @@
     align-items: center;
 }
 
-/* --- SECCIÓN PRINCIPAL (FLUJO LINEAL) --- */
 .seccionFlujoLineal {
     width: 100%;
-    max-width: 800px; /* Un ancho central perfecto para la lectura */
+    max-width: 800px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -26,7 +21,6 @@
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* 1. Títulos Centrales */
 .cabeceraSesiones {
     text-align: center;
     margin-bottom: 40px;
@@ -52,10 +46,9 @@
     text-transform: uppercase;
 }
 
-/* 2. Foto Central Incrustada */
 .contenedorImagenCentral {
     width: 100%;
-    max-width: 600px; /* Tamaño ideal para que no abrume el texto */
+    max-width: 600px;
     margin-bottom: 50px;
     position: relative;
     border-radius: 12px;
@@ -74,7 +67,6 @@
     transform: scale(1.03); 
 }
 
-/* 3. Cuerpo del Texto */
 .cuerpoTextoSesiones {
     width: 100%;
 }
@@ -85,7 +77,7 @@
     line-height: 1.8;
     margin-bottom: 30px;
     font-weight: 300;
-    text-align: justify; /* Texto cuadrado y formal */
+    text-align: justify;
 }
 
 .textoLlamadoAccion {
@@ -94,10 +86,9 @@
     margin-top: 50px;
     font-family: var(--fuenteSerif);
     font-style: italic;
-    text-align: center !important; /* Centrado antes de las tarjetas */
+    text-align: center !important;
 }
 
-/* --- SECCIÓN OPCIONES DE RESERVA (TARJETAS) --- */
 .seccionOpcionesReserva {
     width: 100%;
     max-width: 1000px;
@@ -147,33 +138,11 @@
     flex-grow: 1; 
 }
 
-/* Botones de Reserva */
 .contenedorBotonesReserva {
     display: flex;
     flex-direction: column;
     gap: 15px;
     margin-bottom: 25px;
-}
-
-.botonReservaFantasma {
-    display: block;
-    width: 100%;
-    padding: 15px 20px;
-    border: 1px solid var(--colorDorado);
-    border-radius: 50px;
-    color: var(--colorDorado);
-    text-decoration: none;
-    font-size: 14px;
-    font-family: var(--fuenteSans);
-    letter-spacing: 1px;
-    transition: all 0.3s ease;
-    background-color: transparent;
-}
-
-.botonReservaFantasma:hover {
-    background-color: var(--colorDorado);
-    color: var(--colorOscuro);
-    box-shadow: 0 5px 15px rgba(197, 160, 89, 0.3);
 }
 
 .subtextoLugar {
@@ -183,7 +152,6 @@
     line-height: 1.6;
 }
 
-/* --- CITA FINAL --- */
 .contenedorCitaFinal {
     text-align: center;
     margin-top: 80px;
@@ -198,11 +166,6 @@
     font-style: italic; 
     letter-spacing: 1px;
 }
-
-
-/* =========================================
-   MEDIA QUERIES (DISPOSITIVOS MÓVILES)
-   ========================================= */
 
 @media (max-width: 900px) {
     .contenedorTarjetas {

@@ -1,3 +1,4 @@
+/* Variables Globales */
 :root {
     --colorDorado: #c5a059;
     --colorBlanco: #ffffff;
@@ -7,6 +8,7 @@
     --fuenteSans: 'Arial', sans-serif;
 }
 
+/* Reseteo Básico */
 * {
     margin: 0;
     padding: 0;
@@ -27,6 +29,7 @@ h1, h2, h3 {
     font-weight: normal;
 }
 
+/* --- NAVEGACIÓN GLOBAL --- */
 .encabezadoPrincipal {
     position: absolute; 
     top: 0;
@@ -107,11 +110,60 @@ h1, h2, h3 {
     padding-bottom: 4px;
 }
 
+/* --- BOTONES GLOBALES UNIFICADOS --- */
+.botonFantasmaGlobal {
+    display: inline-block;
+    width: fit-content; 
+    padding: 12px 30px; 
+    border: 1px solid rgba(197, 160, 89, 0.3); 
+    border-radius: 50px; 
+    color: var(--colorGrisClaro);
+    text-decoration: none;
+    font-family: var(--fuenteSans);
+    font-size: 13px; 
+    letter-spacing: 2px;
+    background-color: rgba(0, 0, 0, 0.3); 
+    backdrop-filter: blur(5px);
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); 
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.botonFantasmaGlobal:hover {
+    background-color: rgba(197, 160, 89, 0.15);
+    color: var(--colorDorado);
+    border-color: var(--colorDorado);
+    transform: translateY(-5px); 
+    box-shadow: 0 5px 20px rgba(197, 160, 89, 0.3);
+}
+
+.botonDoradoGlobal {
+    display: inline-block;
+    background-color: var(--colorDorado);
+    color: var(--colorOscuro);
+    padding: 14px 28px;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(197, 160, 89, 0.3);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.botonDoradoGlobal:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(197, 160, 89, 0.5);
+}
+
 @keyframes fadeSutil {
     from { opacity: 0; }
     to { opacity: 1; }
 }
 
+/* --- MEDIA QUERIES (MENÚ MÓVIL) --- */
 @media (max-width: 900px) {
     .iconoHamburguesa {
         display: flex; 
