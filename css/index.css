@@ -1,103 +1,74 @@
-.seccionHero {
+.hero-section {
     background-image: 
             linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.95) 100%),
             url('../imagenes/foto-autor-1.png');
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
-    
     min-height: 100vh;
     display: flex;
     align-items: center; 
     padding: 0 5%;
 }
 
-.contenedorMensaje {
+.message-container {
     width: 50%; 
     max-width: 700px; 
     position: relative;
     z-index: 10;
 }
 
-@keyframes subirAparecer {
+@keyframes slideUpFade {
     from { opacity: 0; transform: translateY(30px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
-.mensajePrincipal {
+.main-message {
     font-size: 42px; 
     line-height: 1.15;
     margin-top: 100px;
     font-style: italic;
-    color: var(--colorDorado);
+    color: var(--gold-color);
     text-shadow: 2px 4px 20px rgba(0,0,0,0.9);
     opacity: 0;
-    animation: subirAparecer 1s cubic-bezier(0.25, 0.8, 0.25, 1) 0.3s forwards;
+    animation: slideUpFade 1s cubic-bezier(0.25, 0.8, 0.25, 1) 0.3s forwards;
 }
 
-.nombreAutor {
-    color: var(--colorDorado);
+.author-name {
+    color: var(--gold-color);
     font-size: 42px; 
     letter-spacing: 5px;
-    font-family: var(--fuenteSans);
+    font-family: var(--sans-font);
     border-top: 1px solid rgba(197, 160, 89, 0.4); 
     display: inline-block;
     margin-top: 15px; 
     padding-top: 15px;
     opacity: 0;
-    animation: subirAparecer 1s cubic-bezier(0.25, 0.8, 0.25, 1) 0.6s forwards;
+    animation: slideUpFade 1s cubic-bezier(0.25, 0.8, 0.25, 1) 0.6s forwards;
 }
 
-.contenedorServiciosHero {
+.hero-services-container {
     margin-top: 45px; 
     display: flex;
     flex-direction: column; 
     gap: 15px; 
     opacity: 0;
-    animation: subirAparecer 1s cubic-bezier(0.25, 0.8, 0.25, 1) 0.9s forwards;
+    animation: slideUpFade 1s cubic-bezier(0.25, 0.8, 0.25, 1) 0.9s forwards;
 }
 
 @media (max-width: 900px) {
-    .seccionHero {
+    .hero-section {
         background-image: 
                 linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.95) 100%),
                 url('../imagenes/foto-autor-2.png');
         padding: 0 20px; 
     }
-
-    .contenedorMensaje {
-        max-width: 800px;
-        margin: 0 auto;
-        margin-top: 100px; 
-        display: flex;
-        flex-direction: column;
-        align-items: center; 
-        text-align: center; 
+    .message-container {
+        max-width: 800px; margin: 0 auto; margin-top: 100px; 
+        display: flex; flex-direction: column; align-items: center; text-align: center; 
     }
-
-    .mensajePrincipal {
-        font-size: 28px; 
-        margin-top: 0;
-        margin-bottom: 20px; 
-    }
-
-    .nombreAutor {
-        font-size: 28px; 
-        border-top: 1px solid rgba(197, 160, 89, 0.4); 
-        padding-top: 15px;
-        margin-top: 0;
-    }
-
-    .contenedorServiciosHero {
-        margin-top: 35px; 
-        align-items: center; 
-        width: 100%;
-        gap: 12px;
-    }
-
-    .botonFantasmaGlobal {
-        width: 100%; 
-        max-width: 380px; 
-        padding: 15px 20px; 
-    }
+    .main-message { font-size: 28px; margin-top: 0; margin-bottom: 20px; }
+    .author-name { font-size: 28px; border-top: 1px solid rgba(197, 160, 89, 0.4); padding-top: 15px; margin-top: 0; }
+    .hero-services-container { margin-top: 35px; align-items: center; width: 100%; gap: 12px; }
+    .global-ghost-btn { width: 100%; max-width: 380px; padding: 15px 20px; }
 }

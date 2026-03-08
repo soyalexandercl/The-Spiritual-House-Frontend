@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact The Spiritual House.">
+    <title>Contact | The Spiritual House</title>
+    <link rel="stylesheet" href="css/global-styles.css">
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <nav class="main-nav">
+            <a href="index.html" class="text-logo">The Spiritual House</a>
+            
+            <input type="checkbox" id="menuDesplegable" class="hidden-checkbox">
+            <label for="menuDesplegable" class="hamburger-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <div class="nav-links-container">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">HOME</a></li>
+                    <li><a href="contact.html" class="nav-link active">CONTACT</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="contact-content">
+        <section class="form-section">
+            <header class="contact-header">
+                <h1 class="main-gold-title">CONTACT</h1>
+            </header>
+            
+            <form class="contact-form" action="#" method="POST">
+                <div class="input-group">
+                    <label for="name">Nombre</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="phone">Teléfono</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="email">Correo</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="message">Mensaje</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                
+                <button type="submit" class="global-gold-btn">ENVIAR</button>
+            </form>
+        </section>
+    </main>
+
+</body>
+</html>

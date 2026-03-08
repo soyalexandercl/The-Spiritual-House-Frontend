@@ -1,4 +1,4 @@
-.contenidoContacto {
+.contact-content {
     background-color: #030303;
     min-height: 100vh;
     padding: 160px 5% 100px 5%;
@@ -7,7 +7,7 @@
     align-items: flex-start;
 }
 
-.seccionFormulario {
+.form-section {
     width: 100%;
     max-width: 600px;
     background: rgba(15, 15, 15, 0.8);
@@ -15,80 +15,69 @@
     border-radius: 12px;
     padding: 50px 40px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-    animation: aparecerSuave 1.5s ease-out forwards;
+    animation: subtleFade 1.5s ease-out forwards;
 }
 
-@keyframes aparecerSuave {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-.cabeceraContacto {
+.contact-header {
     text-align: center;
     margin-bottom: 40px;
 }
 
-.tituloPrincipalDorado {
+.main-gold-title {
     font-size: 38px; 
-    color: var(--colorDorado);
-    font-family: var(--fuenteSerif);
+    color: var(--gold-color);
+    font-family: var(--serif-font);
     letter-spacing: 3px;
     margin-bottom: 10px;
 }
 
-.formularioContacto {
+.contact-form {
     display: flex;
     flex-direction: column;
     gap: 25px;
 }
 
-.grupoInput {
+.input-group {
     display: flex;
     flex-direction: column;
     gap: 8px;
     text-align: left;
 }
 
-.grupoInput label {
-    color: var(--colorGrisClaro);
+.input-group label {
+    color: var(--light-gray-color);
     font-size: 14px;
     letter-spacing: 1px;
-    font-family: var(--fuenteSans);
+    font-family: var(--sans-font);
     text-transform: uppercase;
 }
 
-.grupoInput input, .grupoInput textarea {
+.input-group input, .input-group textarea {
     width: 100%;
     padding: 15px;
     background-color: rgba(0, 0, 0, 0.5);
     border: 1px solid rgba(197, 160, 89, 0.3);
     border-radius: 8px;
-    color: var(--colorBlanco);
+    color: var(--white-color);
     font-size: 16px;
-    font-family: var(--fuenteSans);
+    font-family: var(--sans-font);
     transition: all 0.3s ease;
 }
 
-.grupoInput input:focus, .grupoInput textarea:focus {
+.input-group input:focus, .input-group textarea:focus {
     outline: none;
-    border-color: var(--colorDorado);
+    border-color: var(--gold-color);
     box-shadow: 0 0 10px rgba(197, 160, 89, 0.2);
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-.formularioContacto button {
+.contact-form button {
     margin-top: 15px;
     width: 100%;
 }
 
 @media (max-width: 768px) {
-    .contenidoContacto {
-        padding: 130px 20px 80px 20px;
-    }
-    .seccionFormulario {
-        padding: 40px 20px;
-    }
-    .tituloPrincipalDorado {
-        font-size: 30px;
-    }
+    .contact-content { padding: 130px 20px 80px 20px; }
+    .form-section { padding: 40px 20px; }
+    .main-gold-title { font-size: 30px; }
 }
