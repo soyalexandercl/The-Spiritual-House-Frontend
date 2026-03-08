@@ -1,4 +1,5 @@
-.contenidoCatalogo {
+/* --- CATÁLOGO & DETALLE BASE --- */
+.contenidoCatalogo, .contenidoDetalle {
     background-color: #030303;
     min-height: 100vh;
     padding: 140px 5% 100px 5%;
@@ -7,6 +8,12 @@
     align-items: center;
 }
 
+@keyframes aparecerSuave {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- CATÁLOGO EVENTOS --- */
 .cabeceraCatalogo {
     text-align: center;
     margin-bottom: 60px;
@@ -45,7 +52,6 @@
     border-color: rgba(197, 160, 89, 0.5);
 }
 
-/* Modificado para que la imagen provenga del HTML */
 .imagenContenedorEvento {
     width: 100%;
     height: 220px;
@@ -56,13 +62,13 @@
 .imagenEventoHtml {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Asegura que la imagen no se deforme */
+    object-fit: cover;
     display: block;
     transition: transform 0.5s ease;
 }
 
 .tarjetaEvento:hover .imagenEventoHtml {
-    transform: scale(1.05); /* Efecto zoom interior al hacer hover */
+    transform: scale(1.05); 
 }
 
 .contenidoTarjetaEvento {
@@ -72,11 +78,19 @@
     flex-grow: 1;
 }
 
-.tituloEventoDorado {
+.tituloEventoDorado, .tituloPrincipalDorado {
     font-size: 24px;
     color: var(--colorDorado);
     font-family: var(--fuenteSerif);
     margin-bottom: 10px;
+}
+
+.tituloPrincipalDorado {
+    font-size: 38px; 
+    font-style: italic;
+    letter-spacing: 3px;
+    line-height: 1.2;
+    text-shadow: 0 4px 15px rgba(0,0,0,0.8);
 }
 
 .resumenEvento {
@@ -103,16 +117,7 @@
     letter-spacing: 1px;
 }
 
-/* --- DETALLE TALLER --- */
-.contenidoDetalleTaller {
-    background-color: #030303; 
-    min-height: 100vh;
-    padding: 150px 5% 100px 5%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
+/* --- DETALLE EVENTOS --- */
 .seccionFlujoLineal {
     width: 100%;
     max-width: 800px; 
@@ -122,29 +127,13 @@
     animation: aparecerSuave 1.5s ease-out forwards;
 }
 
-@keyframes aparecerSuave {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-.cabeceraTaller {
+.cabeceraDetalle {
     text-align: center;
     width: 100%;
     margin-bottom: 30px;
 }
 
-.tituloPrincipalDorado {
-    font-size: 38px; 
-    color: var(--colorDorado);
-    font-family: var(--fuenteSerif);
-    font-style: italic;
-    letter-spacing: 3px;
-    line-height: 1.2;
-    margin-bottom: 20px;
-    text-shadow: 0 4px 15px rgba(0,0,0,0.8);
-}
-
-.descripcionGeneralTaller {
+.descripcionGeneral {
     font-size: 18px;
     color: rgba(255, 255, 255, 0.8);
     margin-bottom: 40px;
@@ -181,7 +170,7 @@
     font-weight: normal;
 }
 
-.contenedorImagenIncustrada {
+.contenedorImagenCentral {
     width: 100%;
     max-width: 700px;
     margin: 40px 0;
@@ -190,22 +179,22 @@
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
 }
 
-.imagenTaller {
+.imagenDetalle {
     width: 100%;
     height: auto;
     display: block;
     transition: transform 0.6s ease;
 }
 
-.contenedorImagenIncustrada:hover .imagenTaller {
+.contenedorImagenCentral:hover .imagenDetalle {
     transform: scale(1.03); 
 }
 
-.cuerpoTextoJustificado {
+.cuerpoTextoDetalle {
     width: 100%;
 }
 
-.cuerpoTextoJustificado p {
+.cuerpoTextoDetalle p {
     font-size: 18px;
     color: rgba(255, 255, 255, 0.85);
     line-height: 1.8;
@@ -243,34 +232,17 @@
 }
 
 @media (max-width: 768px) {
-    .contenidoCatalogo, .contenidoDetalleTaller {
-        padding: 120px 20px 80px 20px;
-    }
-
-    .tituloPrincipalDorado {
-        font-size: 28px;
-    }
-
+    .contenidoCatalogo, .contenidoDetalle { padding: 120px 20px 80px 20px; }
+    .tituloPrincipalDorado { font-size: 28px; }
     .cajaInscripcion {
         flex-direction: column;
         gap: 25px;
         text-align: center;
         padding: 30px 20px;
     }
-
-    .infoInscripcion {
-        align-items: center;
-    }
-
-    .cuerpoTextoJustificado p {
-        font-size: 16px;
-    }
-
-    .citaCursivaDestacada {
-        font-size: 20px !important;
-    }
-
-    .subtituloDorado {
-        font-size: 20px;
-    }
+    .infoInscripcion { align-items: center; }
+    .botonDoradoGlobal { width: 100%; }
+    .cuerpoTextoDetalle p { font-size: 16px; }
+    .citaCursivaDestacada { font-size: 20px !important; }
+    .subtituloDorado { font-size: 20px; }
 }

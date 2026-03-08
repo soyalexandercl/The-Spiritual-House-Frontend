@@ -79,8 +79,6 @@
 .formularioContacto button {
     margin-top: 15px;
     width: 100%;
-    cursor: pointer;
-    border: none;
 }
 
 @media (max-width: 768px) {

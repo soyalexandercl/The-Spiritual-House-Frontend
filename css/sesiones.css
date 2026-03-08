@@ -1,5 +1,5 @@
-/* --- CATÁLOGO DINÁMICO DE SESIONES --- */
-.contenidoCatalogo {
+/* --- CATÁLOGO & DETALLE BASE --- */
+.contenidoCatalogo, .contenidoDetalle {
     background-color: #030303;
     min-height: 100vh;
     padding: 140px 5% 100px 5%;
@@ -7,11 +7,19 @@
     flex-direction: column;
     align-items: center;
 }
+
+@keyframes aparecerSuave {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- CATÁLOGO DE SESIONES --- */
 .cabeceraCatalogo {
     text-align: center;
     margin-bottom: 60px;
     animation: aparecerSuave 1.2s ease-out forwards;
 }
+
 .cuadriculaCatalogo {
     width: 100%;
     max-width: 1100px;
@@ -20,6 +28,7 @@
     gap: 40px;
     animation: aparecerSuave 1.5s ease-out forwards;
 }
+
 .tarjetaCatalogo {
     background-color: #0a0a0a;
     border: 1px solid rgba(197, 160, 89, 0.2);
@@ -29,17 +38,20 @@
     flex-direction: column;
     transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
+
 .tarjetaCatalogo:hover {
     transform: translateY(-10px);
     box-shadow: 0 20px 40px rgba(0,0,0,0.8), 0 0 20px rgba(197, 160, 89, 0.15);
     border-color: rgba(197, 160, 89, 0.5);
 }
+
 .imagenContenedorCatalogo {
     width: 100%;
     height: 300px;
     overflow: hidden;
     border-bottom: 1px solid rgba(197, 160, 89, 0.2);
 }
+
 .imagenCatalogoHtml {
     width: 100%;
     height: 100%;
@@ -47,25 +59,191 @@
     display: block;
     transition: transform 0.5s ease;
 }
+
 .tarjetaCatalogo:hover .imagenCatalogoHtml {
     transform: scale(1.05);
 }
+
 .contenidoTarjetaCatalogo {
     padding: 30px;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
 }
-.tituloCatalogoDorado {
-    font-size: 22px;
+
+.tituloCatalogoDorado, .tituloPrincipalDorado {
+    font-size: 24px;
     color: var(--colorDorado);
     font-family: var(--fuenteSerif);
     margin-bottom: 10px;
 }
+
+.tituloPrincipalDorado {
+    font-size: 38px; 
+    font-style: italic;
+    letter-spacing: 3px;
+    text-shadow: 0 4px 15px rgba(0,0,0,0.8);
+}
+
 .resumenCatalogo {
     color: rgba(255, 255, 255, 0.7);
     font-size: 14px;
     line-height: 1.6;
     margin-bottom: 25px;
     flex-grow: 1;
+}
+
+/* --- DETALLE DE SESIÓN --- */
+.seccionFlujoLineal {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: aparecerSuave 1.5s ease-out forwards;
+}
+
+.cabeceraDetalle {
+    text-align: center;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.subtituloSecundario {
+    font-size: 16px;
+    color: var(--colorGrisClaro);
+    font-family: var(--fuenteSans);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.contenedorImagenCentral {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 50px;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8), 0 0 20px rgba(197, 160, 89, 0.15);
+}
+
+.imagenDetalle {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+.contenedorImagenCentral:hover .imagenDetalle {
+    transform: scale(1.03); 
+}
+
+.cuerpoTextoDetalle { width: 100%; }
+
+.cuerpoTextoDetalle p {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.8;
+    margin-bottom: 30px;
+    font-weight: 300;
+    text-align: justify;
+}
+
+.textoLlamadoAccion {
+    font-size: 20px !important;
+    color: var(--colorDorado) !important;
+    margin-top: 50px;
+    font-family: var(--fuenteSerif);
+    font-style: italic;
+    text-align: center !important;
+}
+
+.seccionOpcionesReserva {
+    width: 100%;
+    max-width: 1000px;
+    margin-top: 20px;
+}
+
+.contenedorTarjetas {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: stretch; 
+}
+
+.tarjetaReserva {
+    flex: 1;
+    background-color: rgba(15, 15, 15, 0.8); 
+    border: 1px solid rgba(197, 160, 89, 0.2);
+    border-radius: 12px;
+    padding: 50px 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.4s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.tarjetaReserva:hover {
+    transform: translateY(-10px);
+    border-color: rgba(197, 160, 89, 0.6);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.8), 0 0 20px rgba(197, 160, 89, 0.1);
+}
+
+.tituloOpcion {
+    font-size: 24px; 
+    color: var(--colorDorado);
+    font-family: var(--fuenteSerif);
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.descripcionOpcion {
+    font-size: 15px;
+    color: var(--colorGrisClaro);
+    line-height: 1.7;
+    margin-bottom: 40px;
+    flex-grow: 1; 
+}
+
+.contenedorBotonesReserva {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.subtextoLugar {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: auto;
+    line-height: 1.6;
+}
+
+.contenedorCitaFinal {
+    text-align: center;
+    margin-top: 80px;
+    border-top: 1px solid rgba(197, 160, 89, 0.2);
+    padding-top: 40px;
+}
+
+.citaCursiva {
+    font-size: 24px;
+    color: var(--colorDorado);
+    font-family: var(--fuenteSerif);
+    font-style: italic; 
+    letter-spacing: 1px;
+}
+
+@media (max-width: 900px) {
+    .contenedorTarjetas { flex-direction: column; }
+}
+
+@media (max-width: 768px) {
+    .contenidoCatalogo, .contenidoDetalle { padding: 130px 20px 80px 20px; }
+    .tituloPrincipalDorado { font-size: 30px; }
+    .cuerpoTextoDetalle p { font-size: 16px; }
+    .tarjetaReserva { padding: 40px 20px; }
+    .tituloOpcion { font-size: 22px; }
 }
