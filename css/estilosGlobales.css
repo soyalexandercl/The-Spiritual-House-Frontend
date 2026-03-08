@@ -1,0 +1,160 @@
+:root {
+    --colorDorado: #c5a059;
+    --colorBlanco: #ffffff;
+    --colorOscuro: #0a0a0a;
+    --colorGrisClaro: #e0e0e0;
+    --fuenteSerif: 'Georgia', serif;
+    --fuenteSans: 'Arial', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--colorOscuro);
+    color: var(--colorBlanco);
+    font-family: var(--fuenteSans);
+    line-height: 1.6;
+    overflow-x: hidden; 
+}
+
+h1, h2, h3 {
+    color: var(--colorDorado);
+    font-family: var(--fuenteSerif);
+    font-weight: normal;
+}
+
+.encabezadoPrincipal {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 5%;
+    z-index: 100;
+}
+
+.navegacionPrincipal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logotipoTextual {
+    font-family: var(--fuenteSerif);
+    font-style: italic;
+    font-size: 22px; 
+    color: var(--colorBlanco);
+    z-index: 102;
+    position: relative;
+    animation: fadeSutil 1.5s ease-out forwards;
+}
+
+.checkboxOculto {
+    display: none;
+}
+
+.iconoHamburguesa {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 6px;
+    z-index: 102;
+    position: relative;
+}
+
+.iconoHamburguesa span {
+    display: block;
+    width: 28px; 
+    height: 2px;
+    background-color: var(--colorBlanco);
+    transition: transform 0.4s ease, opacity 0.4s ease, background-color 0.4s ease;
+}
+
+.iconoHamburguesa:hover span {
+    background-color: var(--colorDorado);
+}
+
+.contenedorEnlacesWeb {
+    display: flex;
+    align-items: center;
+    animation: fadeSutil 1.5s ease-out forwards;
+}
+
+.listaNavegacion {
+    display: flex;
+    list-style: none;
+    gap: 30px; 
+}
+
+.enlaceNavegacion {
+    text-decoration: none;
+    color: var(--colorGrisClaro);
+    font-size: 13px; 
+    letter-spacing: 2px;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.enlaceNavegacion:hover, .enlaceNavegacion.activo {
+    color: var(--colorDorado);
+}
+
+.activo {
+    border-bottom: 1px solid var(--colorDorado);
+    padding-bottom: 4px;
+}
+
+@keyframes fadeSutil {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@media (max-width: 900px) {
+    .iconoHamburguesa {
+        display: flex; 
+    }
+
+    .contenedorEnlacesWeb {
+        position: fixed; 
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(5, 5, 5, 0.95); 
+        backdrop-filter: blur(15px);
+        flex-direction: column;
+        justify-content: center;
+        transition: right 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    .listaNavegacion {
+        flex-direction: column;
+        align-items: center;
+        gap: 35px;
+    }
+
+    .enlaceNavegacion {
+        font-size: 20px; 
+    }
+
+    .checkboxOculto:checked ~ .contenedorEnlacesWeb {
+        right: 0;
+    }
+
+    .checkboxOculto:checked ~ .iconoHamburguesa span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+        background-color: var(--colorDorado);
+    }
+    
+    .checkboxOculto:checked ~ .iconoHamburguesa span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .checkboxOculto:checked ~ .iconoHamburguesa span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+        background-color: var(--colorDorado);
+    }
+}

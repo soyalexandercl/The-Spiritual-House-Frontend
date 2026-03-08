@@ -1,0 +1,235 @@
+/* =========================================
+   ESTILOS ESPECÍFICOS: SESIONES (PAGE 3)
+   ========================================= */
+
+.contenidoSesiones {
+    background-color: #030303; 
+    min-height: 100vh;
+    padding: 160px 5% 100px 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* --- SECCIÓN PRINCIPAL (FLUJO LINEAL) --- */
+.seccionFlujoLineal {
+    width: 100%;
+    max-width: 800px; /* Un ancho central perfecto para la lectura */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: aparecerSuave 1.5s ease-out forwards;
+}
+
+@keyframes aparecerSuave {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* 1. Títulos Centrales */
+.cabeceraSesiones {
+    text-align: center;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.tituloPrincipalDorado {
+    font-size: 38px; 
+    color: var(--colorDorado);
+    font-family: var(--fuenteSerif);
+    font-style: italic;
+    letter-spacing: 3px;
+    line-height: 1.2;
+    margin-bottom: 15px;
+    text-shadow: 0 4px 15px rgba(0,0,0,0.8);
+}
+
+.subtituloSecundario {
+    font-size: 16px;
+    color: var(--colorGrisClaro);
+    font-family: var(--fuenteSans);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* 2. Foto Central Incrustada */
+.contenedorImagenCentral {
+    width: 100%;
+    max-width: 600px; /* Tamaño ideal para que no abrume el texto */
+    margin-bottom: 50px;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8), 0 0 20px rgba(197, 160, 89, 0.15);
+}
+
+.imagenDavidSesion {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+.contenedorImagenCentral:hover .imagenDavidSesion {
+    transform: scale(1.03); 
+}
+
+/* 3. Cuerpo del Texto */
+.cuerpoTextoSesiones {
+    width: 100%;
+}
+
+.cuerpoTextoSesiones p {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.8;
+    margin-bottom: 30px;
+    font-weight: 300;
+    text-align: justify; /* Texto cuadrado y formal */
+}
+
+.textoLlamadoAccion {
+    font-size: 20px !important;
+    color: var(--colorDorado) !important;
+    margin-top: 50px;
+    font-family: var(--fuenteSerif);
+    font-style: italic;
+    text-align: center !important; /* Centrado antes de las tarjetas */
+}
+
+/* --- SECCIÓN OPCIONES DE RESERVA (TARJETAS) --- */
+.seccionOpcionesReserva {
+    width: 100%;
+    max-width: 1000px;
+    margin-top: 20px;
+}
+
+.contenedorTarjetas {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: stretch; 
+}
+
+.tarjetaSesion {
+    flex: 1;
+    background-color: rgba(15, 15, 15, 0.8); 
+    border: 1px solid rgba(197, 160, 89, 0.2);
+    border-radius: 12px;
+    padding: 50px 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.4s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.tarjetaSesion:hover {
+    transform: translateY(-10px);
+    border-color: rgba(197, 160, 89, 0.6);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.8), 0 0 20px rgba(197, 160, 89, 0.1);
+}
+
+.tituloOpcion {
+    font-size: 24px; 
+    color: var(--colorDorado);
+    font-family: var(--fuenteSerif);
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.descripcionOpcion {
+    font-size: 15px;
+    color: var(--colorGrisClaro);
+    line-height: 1.7;
+    margin-bottom: 40px;
+    flex-grow: 1; 
+}
+
+/* Botones de Reserva */
+.contenedorBotonesReserva {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.botonReservaFantasma {
+    display: block;
+    width: 100%;
+    padding: 15px 20px;
+    border: 1px solid var(--colorDorado);
+    border-radius: 50px;
+    color: var(--colorDorado);
+    text-decoration: none;
+    font-size: 14px;
+    font-family: var(--fuenteSans);
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    background-color: transparent;
+}
+
+.botonReservaFantasma:hover {
+    background-color: var(--colorDorado);
+    color: var(--colorOscuro);
+    box-shadow: 0 5px 15px rgba(197, 160, 89, 0.3);
+}
+
+.subtextoLugar {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: auto;
+    line-height: 1.6;
+}
+
+/* --- CITA FINAL --- */
+.contenedorCitaFinal {
+    text-align: center;
+    margin-top: 80px;
+    border-top: 1px solid rgba(197, 160, 89, 0.2);
+    padding-top: 40px;
+}
+
+.citaCursiva {
+    font-size: 24px;
+    color: var(--colorDorado);
+    font-family: var(--fuenteSerif);
+    font-style: italic; 
+    letter-spacing: 1px;
+}
+
+
+/* =========================================
+   MEDIA QUERIES (DISPOSITIVOS MÓVILES)
+   ========================================= */
+
+@media (max-width: 900px) {
+    .contenedorTarjetas {
+        flex-direction: column; 
+    }
+}
+
+@media (max-width: 768px) {
+    .contenidoSesiones {
+        padding: 130px 20px 80px 20px;
+    }
+    .tituloPrincipalDorado {
+        font-size: 30px;
+    }
+    .subtituloSecundario {
+        font-size: 13px;
+    }
+    .cuerpoTextoSesiones p {
+        font-size: 16px;
+    }
+    .tarjetaSesion {
+        padding: 40px 20px;
+    }
+    .tituloOpcion {
+        font-size: 22px;
+    }
+    .citaCursiva {
+        font-size: 20px;
+    }
+}

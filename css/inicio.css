@@ -1,0 +1,90 @@
+.seccionHero {
+    background-image: 
+            linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.95) 100%),
+            url('../imagenes/foto-autor-1.png');
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    
+    min-height: 100vh;
+    display: flex;
+    align-items: center; 
+    padding: 0 5%;
+}
+
+.contenedorMensaje {
+    width: 50%; 
+    max-width: 700px; 
+    position: relative;
+    z-index: 10;
+}
+
+@keyframes subirAparecer {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.mensajePrincipal {
+    font-size: 42px; 
+    line-height: 1.15;
+    margin-top: 100px;
+    font-style: italic;
+    color: var(--colorDorado);
+    text-shadow: 2px 4px 20px rgba(0,0,0,0.9);
+    opacity: 0;
+    animation: subirAparecer 1s cubic-bezier(0.25, 0.8, 0.25, 1) 0.3s forwards;
+}
+
+.nombreAutor {
+    color: var(--colorDorado);
+    font-size: 42px; 
+    letter-spacing: 5px;
+    font-family: var(--fuenteSans);
+    border-top: 1px solid rgba(197, 160, 89, 0.4); 
+    display: inline-block;
+    margin-top: 15px; 
+    padding-top: 15px;
+    opacity: 0;
+    animation: subirAparecer 1s cubic-bezier(0.25, 0.8, 0.25, 1) 0.6s forwards;
+}
+
+.contenedorServiciosHero {
+    margin-top: 45px; 
+    display: flex;
+    flex-direction: column; 
+    gap: 15px; 
+    opacity: 0;
+    animation: subirAparecer 1s cubic-bezier(0.25, 0.8, 0.25, 1) 0.9s forwards;
+}
+
+.botonServicioFantasma {
+    display: inline-block;
+    width: fit-content; 
+    padding: 12px 30px; 
+    border: 1px solid rgba(197, 160, 89, 0.3); 
+    border-radius: 50px; 
+    color: var(--colorGrisClaro);
+    text-decoration: none;
+    font-family: var(--fuenteSans);
+    font-size: 13px; 
+    letter-spacing: 2px;
+    background-color: rgba(0, 0, 0, 0.3); 
+    backdrop-filter: blur(5px);
+    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1); 
+    position: relative;
+    overflow: hidden;
+}
+
+.botonServicioFantasma:hover {
+    background-color: rgba(197, 160, 89, 0.15);
+    color: var(--colorDorado);
+    border-color: var(--colorDorado);
+    transform: translateX(15px);
+    box-shadow: 0 0 25px rgba(197, 160, 89, 0.4), inset 0 0 10px rgba(197, 160, 89, 0.2);
+}

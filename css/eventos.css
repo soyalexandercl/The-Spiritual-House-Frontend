@@ -1,0 +1,322 @@
+/* =========================================
+   ESTILOS COMPARTIDOS: EVENTOS Y TALLERES
+   ========================================= */
+
+/* --- 1. PÁGINA CATÁLOGO (eventos.html) --- */
+.contenidoCatalogo {
+    background-color: #030303;
+    min-height: 100vh;
+    padding: 140px 5% 100px 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cabeceraCatalogo {
+    text-align: center;
+    margin-bottom: 60px;
+    animation: aparecerSuave 1.2s ease-out forwards;
+}
+
+.subtituloBlanco {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.cuadriculaEventos {
+    width: 100%;
+    max-width: 1100px;
+    display: grid;
+    /* Grid responsivo: Crea columnas automáticamente si hay espacio */
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    animation: aparecerSuave 1.5s ease-out forwards;
+}
+
+.tarjetaEvento {
+    background-color: #0a0a0a;
+    border: 1px solid rgba(197, 160, 89, 0.2);
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.tarjetaEvento:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.8), 0 0 20px rgba(197, 160, 89, 0.15);
+    border-color: rgba(197, 160, 89, 0.5);
+}
+
+.imagenFondoEvento {
+    width: 100%;
+    height: 220px;
+    /* Imagen por defecto para la tarjeta del catálogo */
+    background-image: url('../imagenes/6\ -\ relaxation\ picture.jpg'); 
+    background-size: cover;
+    background-position: center;
+    border-bottom: 1px solid rgba(197, 160, 89, 0.2);
+}
+
+.contenidoTarjetaEvento {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.tituloEventoDorado {
+    font-size: 24px;
+    color: var(--colorDorado);
+    font-family: var(--fuenteSerif);
+    margin-bottom: 10px;
+}
+
+.resumenEvento {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    flex-grow: 1;
+}
+
+.etiquetasEvento {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.etiqueta {
+    font-size: 11px;
+    color: var(--colorDorado);
+    border: 1px solid var(--colorDorado);
+    padding: 5px 10px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.botonVerDetalles {
+    text-align: center;
+    padding: 12px;
+    background-color: rgba(197, 160, 89, 0.1);
+    color: var(--colorDorado);
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 2px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.botonVerDetalles:hover {
+    background-color: var(--colorDorado);
+    color: var(--colorOscuro);
+}
+
+
+/* --- 2. PÁGINA DETALLE TALLER (taller-shine.html) --- */
+.contenidoDetalleTaller {
+    background-color: #030303; 
+    min-height: 100vh;
+    padding: 150px 5% 100px 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Contenedor centralizado para la lectura lineal */
+.seccionFlujoLineal {
+    width: 100%;
+    max-width: 800px; /* Ancho perfecto para leer sin cansar la vista */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: aparecerSuave 1.5s ease-out forwards;
+}
+
+@keyframes aparecerSuave {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.cabeceraTaller {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.tituloPrincipalDorado {
+    font-size: 38px; 
+    color: var(--colorDorado);
+    font-family: var(--fuenteSerif);
+    font-style: italic;
+    letter-spacing: 3px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    text-shadow: 0 4px 15px rgba(0,0,0,0.8);
+}
+
+.descripcionGeneralTaller {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 40px;
+}
+
+/* --- CAJA DE INSCRIPCIÓN (NUEVA) --- */
+.cajaInscripcion {
+    background: rgba(15, 15, 15, 0.8);
+    border: 1px solid rgba(197, 160, 89, 0.3);
+    padding: 25px 40px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 650px;
+    margin: 0 auto;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.infoInscripcion {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 8px;
+}
+
+.datoReserva {
+    color: var(--colorBlanco);
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+.datoReserva strong {
+    color: var(--colorDorado);
+    font-weight: normal;
+}
+
+.botonReservaDorado {
+    background-color: var(--colorDorado);
+    color: var(--colorOscuro);
+    padding: 14px 28px;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(197, 160, 89, 0.3);
+}
+
+.botonReservaDorado:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(197, 160, 89, 0.5);
+}
+
+/* Imágenes Incrustadas en el texto */
+.contenedorImagenIncustrada {
+    width: 100%;
+    max-width: 700px;
+    margin: 40px 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+}
+
+.imagenTaller {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+.contenedorImagenIncustrada:hover .imagenTaller {
+    transform: scale(1.03); /* Leve zoom fotográfico al pasar el ratón */
+}
+
+/* Textos del Taller */
+.cuerpoTextoJustificado {
+    width: 100%;
+}
+
+.cuerpoTextoJustificado p {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.8;
+    margin-bottom: 25px;
+    font-weight: 300;
+    text-align: justify; /* Texto formalmente cuadrado */
+}
+
+.citaCursivaDestacada {
+    font-size: 24px !important;
+    color: var(--colorDorado) !important;
+    font-family: var(--fuenteSerif);
+    font-style: italic;
+    text-align: center !important;
+    margin-bottom: 40px !important;
+    line-height: 1.5 !important;
+}
+
+.subtituloDorado {
+    color: var(--colorDorado);
+    font-size: 22px;
+    font-family: var(--fuenteSerif);
+    letter-spacing: 2px;
+    margin-top: 50px;
+    margin-bottom: 5px;
+    text-align: center; /* Subtítulos centrados para dar ritmo y respiro visual */
+}
+
+.textoPequenoGris {
+    font-size: 14px !important;
+    color: rgba(255, 255, 255, 0.5) !important;
+    text-align: center !important;
+    margin-bottom: 20px !important;
+    letter-spacing: 1px;
+}
+
+
+/* =========================================
+   MEDIA QUERIES (DISPOSITIVOS MÓVILES)
+   ========================================= */
+@media (max-width: 768px) {
+    .contenidoCatalogo, .contenidoDetalleTaller {
+        padding: 120px 20px 80px 20px;
+    }
+
+    .tituloPrincipalDorado {
+        font-size: 28px;
+    }
+
+    /* Ajuste de la caja de reserva para celular */
+    .cajaInscripcion {
+        flex-direction: column;
+        gap: 25px;
+        text-align: center;
+        padding: 30px 20px;
+    }
+
+    .infoInscripcion {
+        align-items: center;
+    }
+
+    .botonReservaDorado {
+        width: 100%;
+        text-align: center;
+    }
+
+    .cuerpoTextoJustificado p {
+        font-size: 16px;
+    }
+
+    .citaCursivaDestacada {
+        font-size: 20px !important;
+    }
+
+    .subtituloDorado {
+        font-size: 20px;
+    }
+}
