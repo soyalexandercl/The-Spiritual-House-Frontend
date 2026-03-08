@@ -30,6 +30,22 @@ h1, h2, h3 {
 }
 
 /* --- NAVEGACIÓN GLOBAL --- */
+.logotipoTextual {
+    font-family: var(--fuenteSerif);
+    font-style: italic;
+    font-size: 22px; 
+    color: var(--colorBlanco);
+    text-decoration: none; /* Evita el subrayado del enlace */
+    z-index: 102;
+    position: relative;
+    animation: fadeSutil 1.5s ease-out forwards;
+    transition: color 0.3s ease;
+}
+
+.logotipoTextual:hover {
+    color: var(--colorDorado); /* Efecto sutil al pasar el ratón por el logo */
+}
+
 .encabezadoPrincipal {
     position: absolute; 
     top: 0;
