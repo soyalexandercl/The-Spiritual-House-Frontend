@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Sessions | Admin</title>
+    <link rel="stylesheet" href="css/global-styles.css">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body class="admin-body">
+
+    <aside class="admin-sidebar">
+        <div class="sidebar-header">
+            <span class="text-logo">The Spiritual House</span>
+            <span class="admin-badge">Admin Panel</span>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="admin-sessions.html" class="sidebar-link active">Sessions</a>
+            <a href="admin-events.html" class="sidebar-link">Events</a>
+            <a href="admin-login.html" class="sidebar-link logout-link">Logout</a>
+        </nav>
+    </aside>
+
+    <main class="admin-main">
+        <div class="admin-topbar">
+            <h1 class="admin-page-title">Manage Sessions</h1>
+            <a href="admin-session-form.html" class="global-gold-btn" style="width: auto;">+ ADD NEW SESSION</a>
+        </div>
+
+        <div class="admin-table-container">
+            <table class="admin-table">
+                <thead>
+                    <tr>
+                        <th>Image</th>
+                        <th>Title</th>
+                        <th>Durations & Prices</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><img src="imagenes/foto-autor-3.jpg" class="table-img" alt="Session"></td>
+                        <td>Video Call (Online)</td>
+                        <td>60 min ($88) <br> 30 min ($48)</td>
+                        <td>
+                            <button class="action-btn" onclick="window.location.href='admin-session-form.html'">Edit</button>
+                            <button class="action-btn delete">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img src="imagenes/8 - spiritual guidance sessions picture.jpg" class="table-img" alt="Session"></td>
+                        <td>Face to Face (In-Person)</td>
+                        <td>60 min ($118) <br> 30 min ($68)</td>
+                        <td>
+                            <button class="action-btn" onclick="window.location.href='admin-session-form.html'">Edit</button>
+                            <button class="action-btn delete">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+</body>
+</html>

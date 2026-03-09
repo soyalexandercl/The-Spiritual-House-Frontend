@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Events | Admin</title>
+    <link rel="stylesheet" href="css/global-styles.css">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body class="admin-body">
+
+    <aside class="admin-sidebar">
+        <div class="sidebar-header">
+            <span class="text-logo">The Spiritual House</span>
+            <span class="admin-badge">Admin Panel</span>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="admin-sessions.html" class="sidebar-link">Sessions</a>
+            <a href="admin-events.html" class="sidebar-link active">Events</a>
+            <a href="admin-login.html" class="sidebar-link logout-link">Logout</a>
+        </nav>
+    </aside>
+
+    <main class="admin-main">
+        <div class="admin-topbar">
+            <h1 class="admin-page-title">Manage Events</h1>
+            <a href="admin-event-form.html" class="global-gold-btn" style="width: auto;">+ ADD NEW EVENT</a>
+        </div>
+
+        <div class="admin-table-container">
+            <table class="admin-table">
+                <thead>
+                    <tr>
+                        <th>Image</th>
+                        <th>Title</th>
+                        <th>Date & Time</th>
+                        <th>Type</th>
+                        <th>Price & Cap.</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><img src="imagenes/meditacion.jpg" class="table-img" alt="Event"></td>
+                        <td>Shine Your Light Session</td>
+                        <td>Oct 24, 2026<br>18:00</td>
+                        <td><span class="status-badge status-confirmed">Confirmed</span></td>
+                        <td>$120<br>20 pax</td>
+                        <td>
+                            <button class="action-btn" onclick="window.location.href='admin-event-form.html'">Edit</button>
+                            <button class="action-btn delete">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img src="imagenes/release.jpg" class="table-img" alt="Event"></td>
+                        <td>Inner Child Healing</td>
+                        <td>TBD</td>
+                        <td><span class="status-badge status-proposal">Proposal</span></td>
+                        <td>$55<br>15 pax</td>
+                        <td>
+                            <button class="action-btn" onclick="window.location.href='admin-event-form.html'">Edit</button>
+                            <button class="action-btn delete">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+</body>
+</html>
