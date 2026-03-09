@@ -82,11 +82,12 @@ h1, h2, h3 {
 .hamburger-icon { display: none; cursor: pointer; flex-direction: column; gap: 6px; z-index: 102; position: relative; }
 .hamburger-icon span { display: block; width: 30px; height: 2px; background-color: var(--white-color); transition: all 0.4s ease; }
 
-/* --- REUSABLE FOOTER --- */
+/* --- REUSABLE FOOTER (CORREGIDO PARA SIMETRÍA PERFECTA) --- */
 .main-footer {
     background-color: #050505;
     border-top: 1px solid rgba(197, 160, 89, 0.2);
-    padding: 60px 5% 40px;
+    /* 50px arriba y 50px abajo aseguran que esté matemáticamente centrado */
+    padding: 50px 5%; 
     text-align: center;
     margin-top: auto;
 }
