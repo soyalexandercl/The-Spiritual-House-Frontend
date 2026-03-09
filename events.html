@@ -10,15 +10,34 @@
 </head>
 <body>
 
-    <header class="main-header">...</header>
+    <header class="main-header">
+        <nav class="main-nav">
+            <a href="index.html" class="text-logo">The Spiritual House</a>
+            <input type="checkbox" id="mobile-menu" class="hidden-checkbox">
+            <label for="mobile-menu" class="hamburger-icon">
+                <span></span><span></span><span></span>
+            </label>
+            <div class="nav-links-container">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">HOME</a></li>
+                    <li><a href="contact.html" class="nav-link">CONTACT</a></li>
+                </ul>
+                <div class="lang-switcher">
+                    <a href="#" class="lang-link active">EN</a>
+                    <span class="lang-separator">|</span>
+                    <a href="#" class="lang-link">ES</a>
+                </div>
+            </div>
+        </nav>
+    </header>
 
     <main class="catalog-content">
         <header class="catalog-header">
             <h1 class="main-gold-title">SPIRITUAL EVENTS</h1>
+            <p class="white-subtitle">Join our sacred spaces for growth, healing, and deep connection.</p>
         </header>
 
         <section class="events-grid">
-            
             <article class="event-card">
                 <div class="event-image-container">
                     <img src="imagenes/meditacion.jpg" alt="Shine Your Light" class="event-html-image">
@@ -41,10 +60,13 @@
                     <a href="event-detail.html" class="global-ghost-btn reserve-btn">VIEW MORE</a>
                 </div>
             </article>
-
         </section>
     </main>
 
-    <footer class="main-footer">...</footer>
+    <footer class="main-footer">
+        <div class="footer-logo">The Spiritual House</div>
+        <p class="footer-text">&copy; 2026 The Spiritual House by David Muñeton. All rights reserved.</p>
+    </footer>
+
 </body>
 </html>

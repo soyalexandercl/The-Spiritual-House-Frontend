@@ -1,62 +1,48 @@
 .catalog-content, .detail-content { 
-    background-color: #030303; 
-    min-height: 100vh; 
-    padding: 140px 5% 80px; 
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    animation: subtleFade 1s ease-out; 
+    background-color: var(--dark-color); 
+    padding: var(--section-padding-desktop); 
+    display: flex; flex-direction: column; align-items: center; 
+    animation: subtleFade 1s ease-out; flex: 1;
 }
 
-.catalog-header { text-align: center; margin-bottom: 50px; }
-.white-subtitle { color: rgba(255,255,255,0.7); letter-spacing: 2px; text-transform: uppercase; font-size: 14px; }
+/* CATALOG */
+.catalog-header { text-align: center; margin-bottom: 70px; width: 100%; }
+.white-subtitle { color: rgba(255,255,255,0.7); letter-spacing: 2px; text-transform: uppercase; font-size: 15px; margin-top: 15px; }
 
-.catalog-grid { width: 100%; max-width: 1000px; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; }
-.catalog-card { background: #0a0a0a; border: 1px solid rgba(197,160,89,0.2); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; transition: transform 0.4s ease; }
-.catalog-card:hover { transform: translateY(-8px); border-color: rgba(197,160,89,0.5); }
-.catalog-image-container { height: 250px; overflow: hidden; }
+.catalog-grid { width: 100%; max-width: 1100px; display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 50px; }
+.catalog-card { background: #0a0a0a; border: 1px solid rgba(197,160,89,0.2); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; transition: transform 0.4s ease; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+.catalog-card:hover { transform: translateY(-8px); border-color: rgba(197,160,89,0.6); box-shadow: 0 15px 40px rgba(197, 160, 89, 0.15); }
+.catalog-image-container { height: 260px; overflow: hidden; }
 .catalog-html-image { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
 .catalog-card:hover .catalog-html-image { transform: scale(1.05); }
-.catalog-card-content { padding: 30px; display: flex; flex-direction: column; flex-grow: 1; }
-.catalog-gold-title { font-size: 22px; color: var(--gold-color); font-family: var(--serif-font); margin-bottom: 10px; }
-.catalog-summary { color: rgba(255,255,255,0.7); font-size: 15px; margin-bottom: 30px; flex-grow: 1; }
+
+.catalog-card-content { padding: 40px; display: flex; flex-direction: column; flex-grow: 1; }
+.catalog-gold-title { font-size: 24px; color: var(--gold-color); font-family: var(--serif-font); margin-bottom: 15px; line-height: 1.3; }
+.catalog-summary { color: rgba(255,255,255,0.7); font-size: 16px; margin-bottom: 35px; flex-grow: 1; }
 .reserve-btn { width: 100%; margin-top: auto; }
 
-/* Booking Layout (Detail) */
-.detail-grid { width: 100%; max-width: 1100px; display: grid; grid-template-columns: 1fr 380px; gap: 50px; align-items: flex-start; }
-.main-gold-title { font-size: 38px; color: var(--gold-color); font-family: var(--serif-font); letter-spacing: 2px; margin-bottom: 20px; }
-.detail-text-body p { font-size: 17px; color: rgba(255,255,255,0.85); margin-bottom: 20px; line-height: 1.8; text-align: justify; }
+/* DETAIL */
+.detail-grid { width: 100%; max-width: 1200px; display: grid; grid-template-columns: 1fr 420px; gap: 60px; align-items: flex-start; }
+.main-gold-title { font-size: 42px; color: var(--gold-color); font-family: var(--serif-font); letter-spacing: 2px; margin-bottom: 30px; line-height: 1.2; }
+.detail-text-body p { font-size: 18px; color: rgba(255,255,255,0.85); margin-bottom: 25px; text-align: justify; }
 
-/* Dynamic Booking Widget */
-.booking-widget { background: rgba(15,15,15,0.8); border: 1px solid rgba(197,160,89,0.3); border-radius: 12px; padding: 30px; position: sticky; top: 100px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
-.widget-title { color: var(--gold-color); font-family: var(--serif-font); font-size: 18px; margin-bottom: 15px; }
-.input-title { margin-top: 25px; }
+/* Booking Widget */
+.booking-widget { background: rgba(15,15,15,0.8); border: 1px solid rgba(197,160,89,0.3); border-radius: 12px; padding: 40px; position: sticky; top: 120px; box-shadow: 0 10px 40px rgba(0,0,0,0.6); }
+.widget-title { color: var(--gold-color); font-family: var(--serif-font); font-size: 20px; margin-bottom: 20px; }
+.input-title { margin-top: 30px; }
 
-/* Radio Options */
-.duration-option { display: flex; align-items: center; border: 1px solid rgba(197,160,89,0.2); padding: 15px; border-radius: 8px; margin-bottom: 12px; cursor: pointer; transition: border-color 0.3s; background: rgba(0,0,0,0.5); }
+.duration-option { display: flex; align-items: center; border: 1px solid rgba(197,160,89,0.2); padding: 18px; border-radius: 8px; margin-bottom: 15px; cursor: pointer; transition: border-color 0.3s; background: rgba(0,0,0,0.5); }
 .duration-option:hover { border-color: var(--gold-color); }
 .duration-option input[type="radio"] { margin-right: 15px; accent-color: var(--gold-color); transform: scale(1.2); }
-.option-text { color: var(--white-color); font-size: 15px; width: 100%; display: flex; justify-content: space-between; }
-.option-text .price { color: var(--gold-color); }
+.option-text { color: var(--white-color); font-size: 16px; width: 100%; display: flex; justify-content: space-between; }
+.option-text .price { color: var(--gold-color); font-weight: bold; }
 
-/* Elegant Date & Time Pickers */
-.elegant-input { 
-    width: 100%; 
-    background: rgba(0,0,0,0.5); 
-    border: 1px solid rgba(197,160,89,0.3); 
-    color: var(--white-color); 
-    padding: 15px; 
-    border-radius: 8px; 
-    font-family: var(--sans-font); 
-    margin-bottom: 25px; 
-    font-size: 15px; 
-    color-scheme: dark; /* Hace que el icono del calendario y reloj se vean bien en fondo oscuro */
-    outline: none; 
-    transition: border-color 0.3s ease;
-}
-.elegant-input:focus { border-color: var(--gold-color); }
+.elegant-input { width: 100%; background: rgba(0,0,0,0.5); border: 1px solid rgba(197,160,89,0.3); color: var(--white-color); padding: 18px; border-radius: 8px; font-family: var(--sans-font); margin-bottom: 30px; font-size: 16px; color-scheme: dark; outline: none; transition: border-color 0.3s ease; }
+.elegant-input:focus { border-color: var(--gold-color); box-shadow: 0 0 10px rgba(197,160,89,0.2); }
 
 @media(max-width: 900px) { 
-    .detail-grid { grid-template-columns: 1fr; } 
-    .booking-widget { position: static; } 
+    .catalog-content, .detail-content { padding: var(--section-padding-mobile); }
+    .detail-grid { grid-template-columns: 1fr; gap: 40px; } 
+    .booking-widget { position: static; padding: 30px 20px; } 
+    .main-gold-title { font-size: 32px; }
 }

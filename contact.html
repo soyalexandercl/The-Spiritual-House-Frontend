@@ -11,7 +11,25 @@
 <body>
 
     <header class="main-header">
-        </header>
+        <nav class="main-nav">
+            <a href="index.html" class="text-logo">The Spiritual House</a>
+            <input type="checkbox" id="mobile-menu" class="hidden-checkbox">
+            <label for="mobile-menu" class="hamburger-icon">
+                <span></span><span></span><span></span>
+            </label>
+            <div class="nav-links-container">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">HOME</a></li>
+                    <li><a href="contact.html" class="nav-link active">CONTACT</a></li>
+                </ul>
+                <div class="lang-switcher">
+                    <a href="#" class="lang-link active">EN</a>
+                    <span class="lang-separator">|</span>
+                    <a href="#" class="lang-link">ES</a>
+                </div>
+            </div>
+        </nav>
+    </header>
 
     <main class="contact-content">
         <section class="form-section">
@@ -22,6 +40,10 @@
                 <div class="input-group">
                     <label for="name">Name</label>
                     <input type="text" id="name" name="name" required>
+                </div>
+                <div class="input-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone" required>
                 </div>
                 <div class="input-group">
                     <label for="email">Email</label>
