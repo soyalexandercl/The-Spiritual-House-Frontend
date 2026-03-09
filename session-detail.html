@@ -33,6 +33,7 @@
 
     <main class="detail-content">
         <div class="detail-grid">
+            
             <article class="detail-info">
                 <h1 class="main-gold-title">Video Call (Online)</h1>
                 <div class="detail-text-body">
@@ -42,26 +43,38 @@
             </article>
 
             <aside class="booking-widget">
-                <form action="payment-method.html" method="GET">
-                    <h3 class="widget-title">Select Duration</h3>
-                    <label class="duration-option">
-                        <input type="radio" name="duration" value="60" checked>
-                        <span class="option-text">60 minutes <span class="price">— $88</span></span>
-                    </label>
-                    <label class="duration-option">
-                        <input type="radio" name="duration" value="30">
-                        <span class="option-text">30 minutes <span class="price">— $48</span></span>
-                    </label>
+                <form action="payment-method.html" method="GET" class="booking-form">
+                    
+                    <div class="form-section">
+                        <h3 class="widget-title">Select Duration</h3>
+                        <div class="duration-group">
+                            <label class="duration-option">
+                                <input type="radio" name="duration" value="60" checked>
+                                <span class="option-text">60 minutes <span class="price">— $88</span></span>
+                            </label>
+                            <label class="duration-option">
+                                <input type="radio" name="duration" value="30">
+                                <span class="option-text">30 minutes <span class="price">— $48</span></span>
+                            </label>
+                        </div>
+                    </div>
 
-                    <h3 class="widget-title input-title">Select Date</h3>
-                    <input type="date" name="session-date" class="elegant-input" required>
+                    <div class="form-section">
+                        <h3 class="widget-title">Select Date</h3>
+                        <input type="date" name="session-date" class="elegant-input" required>
+                    </div>
 
-                    <h3 class="widget-title input-title">Select Time</h3>
-                    <input type="time" name="session-time" class="elegant-input" required>
+                    <div class="form-section">
+                        <h3 class="widget-title">Select Time</h3>
+                        <input type="time" name="session-time" class="elegant-input" required>
+                    </div>
 
-                    <button type="submit" class="global-gold-btn">RESERVE</button>
+                    <div class="submit-container">
+                        <button type="submit" class="global-gold-btn" style="width: 100%;">RESERVE</button>
+                    </div>
                 </form>
             </aside>
+
         </div>
     </main>
 

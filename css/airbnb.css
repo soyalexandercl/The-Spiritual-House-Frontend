@@ -1,0 +1,58 @@
+.airbnb-content {
+    background-color: var(--dark-color);
+    padding: var(--section-padding-desktop);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: subtleFade 1s ease-out;
+    flex: 1;
+}
+
+.linear-flow-section {
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.airbnb-header {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.main-gold-title {
+    font-size: 42px; color: var(--gold-color); font-family: var(--serif-font); letter-spacing: 2px; margin-bottom: 25px; line-height: 1.2;
+}
+
+.general-description {
+    font-size: 18px; color: rgba(255, 255, 255, 0.8);
+}
+
+.video-container {
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+    border: 1px solid rgba(197, 160, 89, 0.3);
+    margin-bottom: 40px;
+    background-color: #000;
+}
+
+.video-container video {
+    width: 100%;
+    display: block;
+    aspect-ratio: 16/9;
+}
+
+.airbnb-action-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .airbnb-content { padding: var(--section-padding-mobile); }
+    .main-gold-title { font-size: 32px; }
+}

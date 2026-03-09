@@ -54,6 +54,7 @@
     display: flex;
     flex-direction: column; 
     gap: 20px; 
+    align-items: flex-start; /* Evita que los botones se estiren */
     opacity: 0;
     animation: slideUpFade 1s cubic-bezier(0.25, 0.8, 0.25, 1) 0.9s forwards;
 }
@@ -67,6 +68,8 @@
     .message-container { width: 100%; max-width: 800px; margin-top: 40px; display: flex; flex-direction: column; align-items: center; text-align: center; }
     .main-message { font-size: 32px; margin-top: 0; margin-bottom: 25px; }
     .author-name { font-size: 26px; border-top: 1px solid rgba(197, 160, 89, 0.4); padding-top: 20px; margin-top: 0; }
+    
+    /* En móvil los botones se centran y toman el ancho disponible hasta un máximo */
     .hero-services-container { margin-top: 45px; align-items: center; width: 100%; gap: 15px; }
-    .global-ghost-btn { width: 100%; max-width: 400px; padding: 15px 20px; }
+    .hero-services-container .global-ghost-btn { width: 100%; max-width: 400px; padding: 15px 20px; }
 }

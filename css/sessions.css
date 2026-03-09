@@ -26,19 +26,35 @@
 .main-gold-title { font-size: 42px; color: var(--gold-color); font-family: var(--serif-font); letter-spacing: 2px; margin-bottom: 30px; line-height: 1.2; }
 .detail-text-body p { font-size: 18px; color: rgba(255,255,255,0.85); margin-bottom: 25px; text-align: justify; }
 
-/* Booking Widget */
-.booking-widget { background: rgba(15,15,15,0.8); border: 1px solid rgba(197,160,89,0.3); border-radius: 12px; padding: 40px; position: sticky; top: 120px; box-shadow: 0 10px 40px rgba(0,0,0,0.6); }
-.widget-title { color: var(--gold-color); font-family: var(--serif-font); font-size: 20px; margin-bottom: 20px; }
-.input-title { margin-top: 30px; }
+/* Booking Widget Refactorizado (Espaciado Uniforme) */
+.booking-widget { 
+    background: rgba(15,15,15,0.8); 
+    border: 1px solid rgba(197,160,89,0.3); 
+    border-radius: 12px; 
+    padding: 40px; 
+    position: sticky; 
+    top: 120px; 
+    box-shadow: 0 10px 40px rgba(0,0,0,0.6); 
+}
 
-.duration-option { display: flex; align-items: center; border: 1px solid rgba(197,160,89,0.2); padding: 18px; border-radius: 8px; margin-bottom: 15px; cursor: pointer; transition: border-color 0.3s; background: rgba(0,0,0,0.5); }
+/* Usamos Flexbox y 'gap' para un espaciado idéntico y perfecto */
+.booking-form { display: flex; flex-direction: column; gap: 30px; }
+.form-section { display: flex; flex-direction: column; gap: 15px; }
+
+/* Limpiamos márgenes nativos */
+.widget-title { color: var(--gold-color); font-family: var(--serif-font); font-size: 20px; margin: 0; }
+
+.duration-group { display: flex; flex-direction: column; gap: 12px; }
+.duration-option { display: flex; align-items: center; border: 1px solid rgba(197,160,89,0.2); padding: 18px; border-radius: 8px; cursor: pointer; transition: border-color 0.3s; background: rgba(0,0,0,0.5); margin: 0; }
 .duration-option:hover { border-color: var(--gold-color); }
 .duration-option input[type="radio"] { margin-right: 15px; accent-color: var(--gold-color); transform: scale(1.2); }
 .option-text { color: var(--white-color); font-size: 16px; width: 100%; display: flex; justify-content: space-between; }
 .option-text .price { color: var(--gold-color); font-weight: bold; }
 
-.elegant-input { width: 100%; background: rgba(0,0,0,0.5); border: 1px solid rgba(197,160,89,0.3); color: var(--white-color); padding: 18px; border-radius: 8px; font-family: var(--sans-font); margin-bottom: 30px; font-size: 16px; color-scheme: dark; outline: none; transition: border-color 0.3s ease; }
+.elegant-input { width: 100%; background: rgba(0,0,0,0.5); border: 1px solid rgba(197,160,89,0.3); color: var(--white-color); padding: 18px; border-radius: 8px; font-family: var(--sans-font); font-size: 16px; color-scheme: dark; outline: none; transition: border-color 0.3s ease; margin: 0; }
 .elegant-input:focus { border-color: var(--gold-color); box-shadow: 0 0 10px rgba(197,160,89,0.2); }
+
+.submit-container { margin-top: 5px; }
 
 @media(max-width: 900px) { 
     .catalog-content, .detail-content { padding: var(--section-padding-mobile); }

@@ -18,8 +18,19 @@
     animation: subtleFade 1.5s ease-out forwards;
 }
 
-.contact-header { text-align: center; margin-bottom: 50px; }
+.contact-header { text-align: center; margin-bottom: 30px; }
 .main-gold-title { font-size: 42px; color: var(--gold-color); font-family: var(--serif-font); letter-spacing: 3px; margin-bottom: 10px; }
+
+/* Contact info block */
+.contact-info-block {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba(197, 160, 89, 0.2);
+    color: var(--light-gray-color);
+}
+.contact-info-block p { font-size: 16px; margin-bottom: 10px; letter-spacing: 1px; }
+.contact-info-block strong { color: var(--gold-color); font-weight: normal; }
 
 .contact-form { display: flex; flex-direction: column; gap: 30px; }
 .input-group { display: flex; flex-direction: column; gap: 10px; text-align: left; }

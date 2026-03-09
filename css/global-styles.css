@@ -20,7 +20,7 @@ body {
     background-color: var(--dark-color);
     color: var(--white-color);
     font-family: var(--sans-font);
-    line-height: 1.7; /* Mejor legibilidad global */
+    line-height: 1.7;
     overflow-x: hidden; 
     display: flex;
     flex-direction: column;
@@ -64,7 +64,7 @@ h1, h2, h3 {
 .nav-links-container {
     display: flex;
     align-items: center;
-    gap: 50px; /* Más espacio entre menú y selector de idioma */
+    gap: 50px;
 }
 
 .nav-list { display: flex; list-style: none; gap: 35px; }
@@ -94,10 +94,10 @@ h1, h2, h3 {
 .footer-text { color: var(--light-gray-color); font-size: 14px; letter-spacing: 1px; opacity: 0.7; }
 
 /* --- GLOBAL BUTTONS --- */
-.global-ghost-btn { display: inline-block; padding: 14px 35px; border: 1px solid rgba(197, 160, 89, 0.3); border-radius: 50px; color: var(--light-gray-color); text-decoration: none; font-size: 13px; letter-spacing: 2px; background-color: rgba(0, 0, 0, 0.3); backdrop-filter: blur(5px); transition: all 0.4s ease; text-transform: uppercase; text-align: center; }
+.global-ghost-btn { display: inline-block; width: fit-content; padding: 14px 35px; border: 1px solid rgba(197, 160, 89, 0.3); border-radius: 50px; color: var(--light-gray-color); text-decoration: none; font-size: 13px; letter-spacing: 2px; background-color: rgba(0, 0, 0, 0.3); backdrop-filter: blur(5px); transition: all 0.4s ease; text-transform: uppercase; text-align: center; }
 .global-ghost-btn:hover { background-color: rgba(197, 160, 89, 0.15); color: var(--gold-color); border-color: var(--gold-color); transform: translateY(-3px); box-shadow: 0 5px 20px rgba(197, 160, 89, 0.2); }
 
-.global-gold-btn { display: inline-block; background-color: var(--gold-color); color: var(--dark-color); padding: 15px 30px; text-decoration: none; font-size: 14px; letter-spacing: 2px; font-weight: bold; border-radius: 50px; transition: all 0.3s ease; text-transform: uppercase; text-align: center; cursor: pointer; border: none; width: 100%; box-shadow: 0 5px 15px rgba(197, 160, 89, 0.3); }
+.global-gold-btn { display: inline-block; width: fit-content; background-color: var(--gold-color); color: var(--dark-color); padding: 15px 30px; text-decoration: none; font-size: 14px; letter-spacing: 2px; font-weight: bold; border-radius: 50px; transition: all 0.3s ease; text-transform: uppercase; text-align: center; cursor: pointer; border: none; box-shadow: 0 5px 15px rgba(197, 160, 89, 0.3); }
 .global-gold-btn:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(197, 160, 89, 0.5); }
 
 /* Animations */

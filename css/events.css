@@ -27,24 +27,53 @@
 .main-gold-title { font-size: 42px; color: var(--gold-color); font-family: var(--serif-font); letter-spacing: 2px; margin-bottom: 25px; line-height: 1.2; }
 .general-description { font-size: 18px; color: rgba(255, 255, 255, 0.8); margin-bottom: 40px; }
 
-.registration-box { background: rgba(15,15,15,0.8); border: 1px solid rgba(197,160,89,0.3); padding: 35px 50px; border-radius: 12px; display: flex; justify-content: space-between; align-items: center; width: 100%; box-shadow: 0 10px 40px rgba(0,0,0,0.6); }
-.registration-info { display: flex; flex-direction: column; text-align: left; gap: 10px; }
-.booking-data { color: var(--white-color); font-size: 16px; letter-spacing: 1px; }
-.booking-data strong { color: var(--gold-color); }
+/* Registration Box Reorganizada */
+.registration-box { 
+    background: rgba(15,15,15,0.8); 
+    border: 1px solid rgba(197,160,89,0.3); 
+    padding: 35px 50px; 
+    border-radius: 12px; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    width: 100%; 
+    max-width: 800px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.6); 
+    margin: 20px auto 40px auto;
+}
+
+.registration-info { text-align: left; }
+
+.booking-data-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.booking-data-list li {
+    color: var(--white-color);
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.booking-data-list strong { color: var(--gold-color); font-weight: normal; }
+.bullet { color: var(--gold-color); font-size: 18px; line-height: 1; }
+.registration-action { text-align: right; }
 
 .center-image-container { width: 100%; margin-bottom: 50px; border-radius: 12px; overflow: hidden; box-shadow: 0 15px 40px rgba(0,0,0,0.5); }
 .detail-image { width: 100%; height: auto; display: block; }
 .justified-text-body { width: 100%; }
 .justified-text-body p { font-size: 18px; color: rgba(255,255,255,0.85); margin-bottom: 30px; text-align: justify; }
 
-.featured-italic-quote { font-size: 26px !important; color: var(--gold-color) !important; font-family: var(--serif-font); font-style: italic; text-align: center !important; margin-bottom: 50px !important; }
-.gold-subtitle { color: var(--gold-color); font-size: 24px; font-family: var(--serif-font); letter-spacing: 2px; margin-top: 60px; margin-bottom: 10px; text-align: center; }
-.small-gray-text { font-size: 15px !important; color: rgba(255,255,255,0.5) !important; text-align: center !important; margin-bottom: 30px !important; }
-
 @media(max-width: 768px) { 
     .catalog-content, .detail-content { padding: var(--section-padding-mobile); }
-    .registration-box { flex-direction: column; gap: 30px; text-align: center; padding: 30px 20px; } 
-    .registration-info { align-items: center; } 
+    .registration-box { flex-direction: column; align-items: flex-start; gap: 30px; padding: 30px 25px; } 
+    .registration-action { width: 100%; text-align: center; } 
     .main-gold-title { font-size: 32px; }
-    .featured-italic-quote { font-size: 22px !important; }
 }
